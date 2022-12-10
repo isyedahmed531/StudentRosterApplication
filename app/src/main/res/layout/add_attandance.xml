@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_orange_light"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="16dp"
+        android:text="Select dept"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="191dp"
+        android:layout_marginTop="71dp"
+        android:layout_toRightOf="@+id/textView1" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner1"
+        android:layout_marginTop="44dp"
+        android:layout_marginRight="24dp"
+        android:layout_toLeftOf="@+id/spinner1"
+        android:text="Select year"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Spinner
+        android:id="@+id/spinnerSE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinneryear"
+        android:layout_alignLeft="@+id/spinneryear" />
+
+    <Spinner
+        android:id="@+id/spinneryear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner1"
+        android:layout_alignLeft="@+id/spinner1"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="32dp" />
+
+    <EditText
+        android:id="@+id/DateEditText"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/DateImageButton"
+        android:layout_toLeftOf="@+id/spinnerSE"
+        android:background="#ffffff"
+        android:editable="false"
+        android:ems="10">
+
+        <requestFocus />
+    </EditText>
+
+    <ImageButton
+        android:id="@+id/DateImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinnerSE"
+        android:layout_alignLeft="@+id/spinnerSE"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="22dp"
+        android:cropToPadding="true"
+        android:src="@android:drawable/ic_menu_my_calendar" />
+
+    <Button
+        android:id="@+id/buttonsubmit"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/DateImageButton"
+        android:layout_alignParentRight="false"
+        android:layout_marginTop="35dp"
+        android:background="@android:color/background_light"
+        android:text="Add Attendance"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignTop="@+id/spinnerSE"
+        android:layout_marginTop="20dp"
+        android:text="Subject"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Button
+        android:id="@+id/viewTotalAttendanceButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/holo_blue_dark"
+        android:text="View Total Attendance"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/viewAttendancebutton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="35dp"
+        android:background="@android:color/holo_blue_dark"
+        android:text="View Attendance"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
